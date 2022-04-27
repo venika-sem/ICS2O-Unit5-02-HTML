@@ -9,21 +9,21 @@
  * Check servie worker.
  */
 if (navigator.serviceWorker) {
-  navigator.serviceWorker.register("/ICS2O-Unit6-01-PWA/sw.js", {
-    scope: "/ICS2O-Unit6-01-PWA/",
+  navigator.serviceWorker.register("/ICS2O-Unit5-02-HTML/sw.js", {
+    scope: "/ICS2O-Unit5-02-HTML/",
   })
 }
 
 /**
- * This function converts the temperature from fahrenheit to celsius.
+ * This function checks if a number is negative or positive.
  */
-function convert() {
-  // input
-  const fahrenheitTemperature = parseFloat(document.getElementById('fahrenheit-temperature').value)
-
-   // process
-  const temperature = (fahrenheitTemperature - 32) * 5 / 9
-
-  // output
-  document.getElementById('temperature').innerHTML = '<p>The temperature in Celsius is: ' + temperature.toFixed(2) + ' °C</p>'
+function check() {
+  const userInteger = parseInt(document.getElementById("number").value);
+  if (userInteger > -1) {
+    document.getElementById("answer").innerHTML =
+      "The integer input is positive.";
+  } else {
+    document.getElementById("answer").innerHTML =
+      "The integer input is a negative.";
+  }
 }
